@@ -2,6 +2,8 @@ package Daos.Offre;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.util.ArrayList;
+import java.util.List;
 
 import Models.Offre.Offre;
 
@@ -31,6 +33,12 @@ public class OffreDAO {
 		
 		
 	}
+	
+	
+	  public List<Offre> getAllOffres(){
+		  List<Offre> offres=new ArrayList<>();
+		  return offres;
+	  }
 
 	
 	
