@@ -63,8 +63,14 @@ public class Offre {
 		public Date getDatePublication() {
 			return datePublication;
 		}
+		
 
 
+
+
+		public void setDatePublication(Date datePublication) {
+			this.datePublication = datePublication;
+		}
 
 
 		public String getCategory() {
