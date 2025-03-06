@@ -1,8 +1,11 @@
 package Servlets;
 
 import java.io.IOException;
-import java.io.PrintWriter;
 
+import java.io.PrintWriter;
+import java.util.List;
+
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -16,14 +19,13 @@ import Models.Offre.Offre;
 @WebServlet("/OffreServlet")
 public class OffreServlet extends HttpServlet {
 	
-    public OffreServlet() {
-        // TODO Auto-generated constructor stub
-    }
-
+  
 	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
+		List<Offre>offres=OffreDAO.getAllOffres();
+		request.setAttribute("offre", offres);
+		request.getRequestDispatcher("").forward(request, response);
+		
 	}
 
 	
@@ -40,11 +42,12 @@ public class OffreServlet extends HttpServlet {
 		
 		int result =OffreDAO.AjouterOffer(offre);
 		 if (result>0) {
-			 response.sendRedirect("");
+			 response.sendRedirect("ajout_offre.jsp");
 			
 		} else {
 			PrintWriter out = response.getWriter();
 			out.println("Data not add ");
+			
 
 		}
 		

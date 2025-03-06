@@ -8,21 +8,20 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
+import Daos.DB.DBConnect;
 import Models.Offre.Offre;
 
 public class OffreDAO {
 	
-	private static Connection coon;
+	
 
-	public OffreDAO(Connection coon) {
-		super();
-		this.coon = coon;
-	}
+	
 
 	public static int AjouterOffer(Offre offre) {
 		int result=0;
 		try {
 			String sql="INSERT INTO OffreEmploi(Titre,Description,category)values(?,?,?)";
+			Connection coon = DBConnect.getCoon();
 			PreparedStatement stm= coon.prepareStatement(sql);
 			stm.setString(1, offre.getTitre());
 			stm.setString(2, offre.getDescription());
@@ -45,6 +44,7 @@ public class OffreDAO {
 		  
 		  try {
 			  String sql ="SELECT * FROM OffreEmploi";
+			  Connection coon = DBConnect.getCoon();
 			  Statement stm = coon.createStatement();
 			  ResultSet rs = stm.executeQuery(sql);
 			  while (rs.next()) {
