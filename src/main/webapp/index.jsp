@@ -17,7 +17,7 @@
             <a href="#" class="text-2xl font-bold text-blue-600">TalentSphere</a>
             <div class="hidden md:flex space-x-4">
                 <a href="login.jsp" class="text-blue-600 hover:text-blue-800">Sign In</a>
-                <a href="register.jsp" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700">Sign Up</a>
+                <a href="DisplayCandidatureByCompanyName" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700">Sign Up</a>
             </div>
             <button class="md:hidden text-blue-600 focus:outline-none" id="menu-toggle">
                 ☰
@@ -25,7 +25,7 @@
         </div>
         <div class="hidden md:hidden flex-col items-center space-y-2 mt-2" id="mobile-menu">
             <a href="login.jsp" class="text-blue-600">Sign In</a>
-            <a href="register.jsp" class="bg-blue-600 text-white px-4 py-2 rounded-lg">Sign Up</a>
+            <a href="DisplayCandidatureByCompanyName" class="bg-blue-600 text-white px-4 py-2 rounded-lg">Sign Up</a>
         </div>
     </nav>
     
