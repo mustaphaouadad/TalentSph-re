@@ -1,4 +1,3 @@
-
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
     <%@ page import ="java.util.*, Models.Offre.Offre" %>
@@ -62,10 +61,13 @@
                         <div class="col-md-6">
                             <div class="card paint-card shadow-sm">
                                 <div class="card-body">
-                                    <p class="fs-5 fw-bold"><%= temp.getTitre() %></p>
-                                    <p><%= temp.getDescription() %></p>
-                                    <p class="text-muted"><%= temp.getCategory() %></p>
-                                    <p class="text-muted"><%= temp.getDatePublication() %></p>
+                                     <p class="fs-5 fw-bold text-primary">Titre: <span class="text-dark"><%= temp.getTitre() %></span></p>
+                             <p><strong>Description:</strong> <%= temp.getDescription() %></p>
+                                <p class="text-muted"><strong>Catégorie:</strong> <%= temp.getCategory() %></p>
+                                     <p class="text-muted"><strong>Publié le:</strong> <%= temp.getDatePublication() %></p>
+                                       <div class="text-end">
+                <a href="#" class="btn btn-success btn-sm">Postuler</a>
+            </div>
                                 </div>
                             </div>
                         </div>
