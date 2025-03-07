@@ -11,8 +11,8 @@ public class DBConnect {
 		
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
-			coon= DriverManager.getConnection("jdbc:mysql://localhost:3306/TalentSph","root","0000");
-			 System.out.println("connection sucssus");
+			coon= DriverManager.getConnection("jdbc:mysql://localhost:3306/TalentSphre","root","0000");
+			 
 			
 			
 		} catch (Exception e) {
