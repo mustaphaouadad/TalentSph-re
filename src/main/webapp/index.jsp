@@ -66,7 +66,10 @@
                                 <p class="text-muted"><strong>Catégorie:</strong> <%= temp.getCategory() %></p>
                                      <p class="text-muted"><strong>Publié le:</strong> <%= temp.getDatePublication() %></p>
                                        <div class="text-end">
-                <a href="#" class="btn btn-success btn-sm">Postuler</a>
+               <form action="PostulerServlet" method="post">
+    <input type="hidden" name="idOffre" value="<%= temp.getId() %>">
+    <button type="submit" class="btn btn-primary">Postuler</button>
+</form>
             </div>
                                 </div>
                             </div>
